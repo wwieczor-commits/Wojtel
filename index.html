@@ -7,7 +7,6 @@
 <meta name="description" content="WOJTEL Wojciech Wieczorek – rzeszowska firma doradczo-handlowa od 2008 r. Fundusze UE, systemy ERP, ISO/IEC 27001, projekty B+R.">
 <meta property="og:title" content="WOJTEL Wojciech Wieczorek">
 <meta property="og:description" content="Doradztwo, które kończy się wdrożeniem. Fundusze UE, IT i B+R dla MŚP. Rzeszów, od 2008 r.">
-<meta property="og:image" content="wojciech.jpg">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,6 +83,14 @@ h2.big{margin:10px 0 0;font-size:clamp(32px,5vw,44px);line-height:1.05}
 .photo .tag{position:absolute;left:14px;bottom:14px;background:var(--p100);padding:8px 12px 6px;font-size:18px;box-shadow:0 6px 10px rgba(40,28,10,.35)}
 .photo .tag b{color:var(--red);font-weight:400}
 .photo figcaption{margin-top:12px;font-weight:700;font-size:14px;line-height:1.3;color:var(--ink-soft)}
+
+.badge{position:relative;width:100%;max-width:420px;background:var(--p100);border:3px solid var(--ink);padding:34px 32px 30px;transform:rotate(-1.6deg);box-shadow:14px 14px 0 var(--red),0 10px 24px rgba(40,28,10,.35);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.badge:hover{transform:rotate(0) scale(1.02)}
+.badge .num{font-size:clamp(130px,18vw,190px);line-height:.9;color:var(--red);margin-top:10px}
+.badge .unit{font-size:34px;margin-top:6px}
+.badge ul{list-style:none;margin:22px 0 0;padding:18px 0 0;border-top:2px dashed var(--ink-soft);display:flex;flex-direction:column;gap:8px;font-weight:700;font-size:15px}
+.badge li:before{content:"✕ ";color:var(--red)}
+.badge .stamp{position:absolute;right:-14px;top:22px;background:var(--ink);color:var(--p100);font-size:16px;padding:8px 12px 6px;transform:rotate(4deg)}
 
 /* pasek */
 .tickerwrap{overflow:hidden;padding:12px 0}
@@ -197,14 +204,17 @@ h2.big{margin:10px 0 0;font-size:clamp(32px,5vw,44px);line-height:1.05}
 </div>
 </div>
 <div class="hero-img up d2">
-<figure class="photo">
-<div class="in">
-<img src="wojciech.jpg" alt="Wojciech Wieczorek, właściciel firmy WOJTEL" width="1200" height="1193">
-<div class="raster" aria-hidden="true"></div>
-<div class="tag disp"><b id="years">18</b> lat praktyki</div>
+<div class="badge">
+<div class="label">Doświadczenie</div>
+<div class="disp num"><span id="years">18</span></div>
+<div class="disp unit">lat praktyki</div>
+<ul>
+<li>Fundusze UE · FENG · FEPW · KPO</li>
+<li>Wdrożenia ERP i IT</li>
+<li>Lead Auditor ISO/IEC 27001</li>
+</ul>
+<div class="stamp disp">Rzeszów · od 2008</div>
 </div>
-<figcaption>Wojciech Wieczorek · właściciel · Lead Auditor ISO/IEC 27001</figcaption>
-</figure>
 </div>
 </section>
 
