@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOJTEL Wojciech Wieczorek – doradztwo, fundusze UE, IT | Rzeszów</title>
+<meta name="description" content="WOJTEL Wojciech Wieczorek – rzeszowska firma doradczo-handlowa od 2008 r. Fundusze UE, systemy ERP, ISO/IEC 27001, projekty B+R.">
+<meta property="og:title" content="WOJTEL Wojciech Wieczorek">
+<meta property="og:description" content="Doradztwo, które kończy się wdrożeniem. Fundusze UE, IT i B+R dla MŚP. Rzeszów, od 2008 r.">
+<meta property="og:image" content="wojciech.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Courier+Prime:wght@400;700&display=swap">
+<style>
+:root{
+  --p050:#f4f2ec;--p100:#efe6d1;--p200:#d8c9a6;--p300:#c9b792;
+  --ink:#15130f;--ink-soft:#3b342b;--red:#e03a1e;--red-ink:#a8260f;
+  --display:Anton,Impact,"Arial Narrow",sans-serif;
+  --type:"Courier Prime","Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(var(--p200),var(--p300) 700px) var(--p300);font-family:var(--type);color:var(--ink);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(rgba(60,40,10,.09) .6px,transparent .7px);background-size:3px 3px;z-index:0}
+main,header,footer{position:relative;z-index:1}
+a{color:var(--red-ink)}a:hover{color:var(--ink)}
+.wrap{max-width:1120px;margin:0 auto;padding-left:24px;padding-right:24px}
+.disp{font-family:var(--display);text-transform:uppercase;font-weight:400;line-height:1}
+.label{font-weight:700;font-size:13px;letter-spacing:.3em;text-transform:uppercase}
+.nr{font-weight:700;font-size:14px;letter-spacing:.1em;color:var(--red-ink)}
+h2.big{margin:10px 0 0;font-size:clamp(32px,5vw,44px);line-height:1.05}
+
+/* animacje */
+@keyframes up{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes slideL{from{opacity:0;transform:translateX(-60px)}to{opacity:1;transform:none}}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes pulse{0%,100%{box-shadow:6px 6px 0 var(--red)}50%{box-shadow:10px 10px 0 var(--red)}}
+.up{animation:up .8s cubic-bezier(.2,.7,.2,1) both}
+.bar{animation:slideL .7s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.12s}.d2{animation-delay:.26s}.d3{animation-delay:.4s}.d4{animation-delay:.55s}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.on{opacity:1;transform:none}
+
+/* przyciski */
+.btn{display:inline-block;text-decoration:none;font-family:var(--display);text-transform:uppercase;font-size:20px;line-height:1;padding:15px 22px 13px;transition:transform .15s ease,box-shadow .15s ease;cursor:pointer;border:0}
+.btn:hover{transform:translate(-3px,-3px)}
+.btn:active{transform:translate(3px,3px)}
+.btn-ink{background:var(--ink);color:var(--p100);box-shadow:6px 6px 0 var(--red)}
+.btn-ink:hover{color:var(--p100)}
+.btn-pulse{animation:pulse 2.4s ease-in-out infinite}
+.btn-paper{background:var(--p100);color:var(--ink);border:3px solid var(--ink);padding:12px 20px 10px}
+.btn-red{background:var(--red);color:var(--p100)}
+.btn-red:hover{color:var(--p100)}
+
+/* nawigacja */
+.top{background:var(--ink);color:var(--p100)}
+.top nav{display:flex;flex-wrap:wrap;gap:8px 28px;align-items:center;justify-content:space-between;padding-top:10px;padding-bottom:10px}
+.logo{font-size:26px;color:var(--p100);text-decoration:none;padding:10px 0}
+.logo:hover{color:var(--p100)}
+.menu{display:flex;flex-wrap:wrap;gap:4px 26px;align-items:center;font-weight:700;font-size:14px;letter-spacing:.15em;text-transform:uppercase}
+.menu a.lnk{color:var(--p100);text-decoration:none;padding:14px 0;position:relative}
+.menu a.lnk:after{content:"";position:absolute;left:0;right:100%;bottom:6px;height:3px;background:var(--red);transition:right .25s ease}
+.menu a.lnk:hover:after{right:0}
+.menu .tel{background:var(--red);color:var(--p100);text-decoration:none;padding:12px 16px;letter-spacing:.1em;transition:transform .15s}
+.menu .tel:hover{transform:translate(-2px,-2px);color:var(--p100)}
+
+/* hero */
+.hero{display:flex;flex-wrap:wrap;gap:56px;align-items:center;padding-top:64px;padding-bottom:56px}
+.hero-txt{flex:1 1 420px;min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+.hero h1{margin:18px 0 0;display:flex;flex-direction:column;align-items:flex-start;font-weight:400}
+.belka1{background:var(--ink);color:var(--p100);font-size:clamp(54px,9vw,76px);padding:10px 20px 8px;box-shadow:10px 10px 0 var(--red)}
+.belka2{background:var(--red);color:var(--p100);font-size:clamp(24px,4vw,32px);padding:10px 18px 8px;margin:22px 0 0 40px;box-shadow:8px 8px 0 var(--ink)}
+.claim{margin:36px 0 0;font-size:clamp(26px,3.6vw,32px);line-height:1.1;max-width:540px}
+.claim span{background:var(--p100);color:var(--red);padding:0 6px}
+.lead{margin:14px 0 0;font-size:17px;line-height:1.55;max-width:520px;color:var(--ink-soft)}
+.ctas{margin-top:30px;display:flex;flex-wrap:wrap;gap:16px}
+.hero-img{flex:1 1 340px;min-width:0;display:flex;justify-content:center}
+.photo{margin:0;width:100%;max-width:440px;background:var(--p050);padding:16px;transform:rotate(-1.6deg);box-shadow:14px 14px 0 var(--red),0 10px 24px rgba(40,28,10,.35);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.photo:hover{transform:rotate(0) scale(1.02)}
+.photo .in{position:relative;overflow:hidden}
+.photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 15%}
+.photo .raster{position:absolute;inset:0;background-image:radial-gradient(rgba(21,19,15,.18) .8px,transparent 1px);background-size:5px 5px;mix-blend-mode:multiply}
+.photo .tag{position:absolute;left:14px;bottom:14px;background:var(--p100);padding:8px 12px 6px;font-size:18px;box-shadow:0 6px 10px rgba(40,28,10,.35)}
+.photo .tag b{color:var(--red);font-weight:400}
+.photo figcaption{margin-top:12px;font-weight:700;font-size:14px;line-height:1.3;color:var(--ink-soft)}
+
+/* pasek */
+.tickerwrap{overflow:hidden;padding:12px 0}
+.tickerbox{background:var(--ink);color:var(--p100);overflow:hidden;padding:14px 0;transform:rotate(-1deg);margin:0 -20px}
+.tickertrack{display:flex;width:max-content;font-size:24px;white-space:nowrap;animation:ticker 28s linear infinite}
+.tickertrack span{padding:0 22px}
+.tickertrack i{color:var(--red);font-style:normal}
+
+/* liczby */
+.stats{display:flex;flex-wrap:wrap;gap:24px;align-items:stretch;padding-top:64px;padding-bottom:56px}
+.stat{flex:1 1 220px;padding:24px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;box-shadow:0 10px 24px rgba(40,28,10,.35);transition:transform .2s ease,box-shadow .2s ease}
+.stat:hover{transform:translateY(-6px) rotate(-.4deg)}
+.stat .n{font-size:96px;line-height:.95;margin-top:8px}
+.stat .label{font-size:13px}
+.stat.paper{background:var(--p100);border:3px solid var(--ink);transform:rotate(.8deg)}
+.stat.paper .n{color:var(--red)}
+.stat.dark{background:var(--ink);color:var(--p100);transform:rotate(-.8deg)}
+.stat.dark .label{color:var(--p200)}
+.reg{flex:999 1 420px;min-width:0;background:var(--p100);border:3px solid var(--ink);padding:22px 26px;box-shadow:0 4px 0 rgba(21,19,15,.25)}
+.reg h2{margin:0}
+.reg dl{margin:14px 0 0;display:grid;grid-template-columns:minmax(100px,150px) minmax(0,1fr);column-gap:14px;row-gap:10px;font-size:16px;line-height:1.4}
+.reg dt{font-weight:700;color:var(--ink-soft)}
+.reg dd{margin:0}
+
+/* opis */
+.doc{background:var(--p050);padding:72px 24px;clip-path:polygon(0% 18px,6% 4px,12% 22px,19% 6px,26% 18px,33% 2px,41% 20px,48% 6px,56% 16px,63% 0px,70% 18px,78% 4px,85% 22px,92% 2px,100% 16px,100% calc(100% - 16px),94% 100%,87% calc(100% - 18px),80% calc(100% - 4px),72% calc(100% - 22px),65% calc(100% - 2px),58% calc(100% - 18px),50% calc(100% - 4px),43% calc(100% - 20px),36% calc(100% - 2px),28% calc(100% - 16px),21% 100%,13% calc(100% - 18px),6% calc(100% - 4px),0% calc(100% - 16px))}
+.doc .cols{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;gap:40px}
+.doc .txt{flex:999 1 460px;min-width:0}
+.doc p{margin:20px 0 0;font-size:18px;line-height:1.6}
+.steps{flex:1 1 260px;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.steps li{background:var(--p100);padding:14px 18px;display:flex;gap:14px;align-items:center;box-shadow:0 6px 10px rgba(40,28,10,.25);font-weight:700;font-size:16px;transition:transform .2s}
+.steps li:hover{transform:translateX(6px)}
+.steps li .disp{font-size:34px}
+.steps li:first-child .disp{color:var(--red)}
+.steps li:last-child{background:var(--ink);color:var(--p100)}
+.steps li:last-child .disp{color:var(--red)}
+
+/* usługi */
+.services{padding-top:72px;padding-bottom:80px}
+.hint{margin:10px 0 0;font-size:16px;color:var(--ink-soft)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:28px;align-items:start}
+.svc{background:var(--p100);border-top:8px solid var(--ink);box-shadow:0 6px 10px rgba(40,28,10,.35);transition:transform .2s ease,box-shadow .2s ease,background .2s,color .2s}
+.svc:first-child{border-top-color:var(--red)}
+.svc:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 16px 26px rgba(40,28,10,.4)}
+.svc summary{list-style:none;cursor:pointer;padding:22px 24px;display:block}
+.svc summary::-webkit-details-marker{display:none}
+.svc .head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.svc .head .disp{font-size:24px;line-height:1.1}
+.svc .sign{font-family:var(--display);font-size:28px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--ink);color:var(--p100);transition:transform .25s,background .2s}
+.svc .short{display:block;margin-top:10px;font-size:16px;line-height:1.5}
+.svc .more{margin:0 24px;padding:14px 0 22px;border-top:2px dashed currentColor;font-size:15px;line-height:1.55}
+.svc[open]{background:var(--ink);color:var(--p100);border-top-color:var(--red)}
+.svc[open] .sign{background:var(--red);transform:rotate(45deg)}
+
+/* kontakt */
+.contact{background:var(--ink);color:var(--p100);padding:88px 24px 40px;clip-path:polygon(0% 24px,7% 8px,15% 20px,23% 4px,31% 18px,40% 6px,48% 22px,57% 4px,65% 16px,74% 2px,82% 20px,91% 6px,100% 18px,100% 100%,0% 100%)}
+.contact .cols{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px}
+.contact .info{flex:1 1 340px;min-width:0}
+.contact .info .label{color:var(--p200)}
+.contact h2{margin:10px 0 0;font-size:clamp(36px,5vw,48px)}
+.contact .list{margin-top:28px;display:flex;flex-direction:column;align-items:flex-start;gap:14px;font-weight:700;font-size:18px;line-height:1.5}
+.contact .list a.mail{color:var(--p100);padding:4px 0}
+.contact .small{font-weight:400;font-size:15px;color:var(--p200)}
+.form{flex:1 1 380px;min-width:0;background:var(--p100);color:var(--ink);padding:26px;transform:rotate(.6deg);box-shadow:12px 12px 0 var(--red)}
+.form h3{margin:0;font-size:26px;line-height:1.1}
+.form .fields{margin-top:16px;display:flex;flex-direction:column;gap:14px}
+.form label,.form legend{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:14px}
+.form fieldset{border:0;margin:0;padding:0}
+.form legend{padding:0;margin-bottom:8px}
+.form input,.form textarea{font-family:var(--type);font-size:16px;padding:12px;border:2px solid var(--ink);background:var(--p050);color:var(--ink);transition:border-color .15s,background .15s}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--red);background:#fff}
+.form textarea{resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{cursor:pointer;font-family:var(--type);font-weight:700;font-size:14px;padding:10px 14px;border:2px solid var(--ink);background:transparent;color:var(--ink);transition:transform .15s,background .15s,color .15s}
+.chip:hover{transform:translate(-2px,-2px)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--p100)}
+.form .note{margin:0;font-size:13px;color:var(--ink-soft)}
+.copy{max-width:1120px;margin:56px auto 0;font-size:13px;color:var(--p200)}
+
+@media (max-width:520px){.belka2{margin-left:16px}.stat .n{font-size:76px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+<nav class="wrap" aria-label="Menu główne">
+<a class="logo disp" href="#start">WOJTEL<span style="color:var(--red)">.</span></a>
+<div class="menu">
+<a class="lnk" href="#o-firmie">O firmie</a>
+<a class="lnk" href="#uslugi">Usługi</a>
+<a class="lnk" href="#kontakt">Kontakt</a>
+<a class="tel" href="tel:+48505564400">505 564 400</a>
+</div>
+</nav>
+</header>
+
+<main>
+<section id="start" class="wrap hero">
+<div class="hero-txt">
+<div class="label up">Teczka · Informacja o firmie</div>
+<h1>
+<span class="disp belka1 bar d1">WOJTEL</span>
+<span class="disp belka2 bar d2">Wojciech Wieczorek</span>
+</h1>
+<p class="disp claim up d3">Doradztwo, które <span>kończy się</span> wdrożeniem.</p>
+<p class="lead up d3">Fundusze europejskie, systemy IT i projekty badawczo-rozwojowe dla małych i średnich firm. Rzeszów · Podkarpacie · od 2008 r.</p>
+<div class="ctas up d4">
+<a class="btn btn-ink btn-pulse" href="#kontakt">Zapytaj o dofinansowanie</a>
+<a class="btn btn-paper" href="mailto:wwieczor@gmail.com">Napisz e-mail</a>
+</div>
+</div>
+<div class="hero-img up d2">
+<figure class="photo">
+<div class="in">
+<img src="wojciech.jpg" alt="Wojciech Wieczorek, właściciel firmy WOJTEL" width="1200" height="1058">
+<div class="raster" aria-hidden="true"></div>
+<div class="tag disp"><b id="years">18</b> lat praktyki</div>
+</div>
+<figcaption>Wojciech Wieczorek · właściciel · Lead Auditor ISO/IEC 27001</figcaption>
+</figure>
+</div>
+</section>
+
+<div class="tickerwrap" aria-hidden="true"><div class="tickerbox">
+<div class="tickertrack disp" id="ticker"></div>
+</div></div>
+
+<section class="wrap stats" aria-label="Liczby i dane rejestrowe">
+<div class="stat paper reveal">
+<div class="label">Od roku</div>
+<div class="n disp">2008</div>
+<div class="label" style="margin-top:10px">na rynku</div>
+</div>
+<div class="stat dark reveal">
+<div class="label">Obszarów usług</div>
+<div class="n disp">6</div>
+<div class="label" style="margin-top:10px">w jednym miejscu</div>
+</div>
+<div class="reg reveal">
+<h2 class="label">Dane rejestrowe</h2>
+<dl>
+<dt>Firma</dt><dd>WOJTEL Wojciech Wieczorek</dd>
+<dt>Forma</dt><dd>jednoosobowa działalność gospodarcza</dd>
+<dt>NIP</dt><dd>813-336-15-34</dd>
+<dt>Adres</dt><dd>ul. Krokusowa 6, 35-604 Rzeszów</dd>
+</dl>
+</div>
+</section>
+
+<section id="o-firmie" class="doc">
+<div class="cols">
+<div class="txt reveal">
+<div class="nr">№ 01 · OPIS FIRMY</div>
+<h2 class="disp big">Od pomysłu do rozliczenia</h2>
+<p>WOJTEL Wojciech Wieczorek to rzeszowska firma doradczo-handlowa działająca od 2008 roku. Wspiera przedsiębiorstwa – przede wszystkim małe i średnie – w pozyskiwaniu finansowania z funduszy europejskich oraz w realizacji projektów inwestycyjnych, informatycznych i badawczo-rozwojowych.</p>
+<p>Firma łączy wiedzę o programach dotacyjnych z praktyką sprzedaży i wdrażania rozwiązań IT. Klient dostaje nie tylko pomysł na dofinansowanie, ale realny plan jego wykorzystania.</p>
+</div>
+<ol class="steps reveal">
+<li><span class="disp">1</span>Dobór programu</li>
+<li><span class="disp">2</span>Wniosek i ocena</li>
+<li><span class="disp">3</span>Wdrożenie systemu</li>
+<li><span class="disp">4</span>Rozliczenie projektu</li>
+</ol>
+</div>
+</section>
+
+<section id="uslugi" class="wrap services">
+<div class="nr">№ 02 · ZAKRES USŁUG</div>
+<h2 class="disp big">W czym pomagam</h2>
+<p class="hint">Kliknij kartę, żeby zobaczyć szczegóły.</p>
+<div class="grid">
+<details class="svc reveal" open>
+<summary><span class="head"><span class="disp">Fundusze UE</span><span class="sign" aria-hidden="true">+</span></span><span class="short">Dobór programu, ocena kwalifikowalności, wniosek i rozliczenie.</span></summary>
+<p class="more">FENG, FEPW, FEP, KPO i programy regionalne. Sprawdzam, czy projekt ma szansę, przygotowuję wniosek i prowadzę firmę aż do rozliczenia.</p>
+</details>
+<details class="svc reveal">
+<summary><span class="head"><span class="disp">Pośrednictwo IT</span><span class="sign" aria-hidden="true">+</span></span><span class="short">Pozyskiwanie klientów B2B i prowadzenie sprzedaży usług IT.</span></summary>
+<p class="more">Łączę firmy szukające rozwiązań informatycznych z wykonawcami – od pierwszej rozmowy, przez negocjacje, po podpisanie umowy.</p>
+</details>
+<details class="svc reveal">
+<summary><span class="head"><span class="disp">Systemy ERP</span><span class="sign" aria-hidden="true">+</span></span><span class="short">Doradztwo przy wdrożeniach ERP, także z dofinansowaniem.</span></summary>
+<p class="more">Pomagam wybrać system, zaplanować wdrożenie i – tam, gdzie to możliwe – sfinansować je z dotacji na cyfryzację.</p>
+</details>
+<details class="svc reveal">
+<summary><span class="head"><span class="disp">Bezpieczeństwo informacji</span><span class="sign" aria-hidden="true">+</span></span><span class="short">Audyty i przygotowanie do normy ISO/IEC 27001:2023.</span></summary>
+<p class="more">Jako Lead Auditor ISO/IEC 27001 przeprowadzam audyty i przygotowuję organizacje do certyfikacji systemu zarządzania bezpieczeństwem informacji.</p>
+</details>
+<details class="svc reveal">
+<summary><span class="head"><span class="disp">Projekty B+R</span><span class="sign" aria-hidden="true">+</span></span><span class="short">Koncepcje projektów badawczo-rozwojowych i konsorcja z nauką.</span></summary>
+<p class="more">Od pomysłu na innowację, przez dobór partnera naukowego i budowę konsorcjum, po komercjalizację wyników prac B+R.</p>
+</details>
+<details class="svc reveal">
+<summary><span class="head"><span class="disp">Doradztwo gospodarcze</span><span class="sign" aria-hidden="true">+</span></span><span class="short">Analizy inwestycyjne i materiały dla zarządu i inwestorów.</span></summary>
+<p class="more">Przygotowuję analizy, prezentacje i dokumenty dla zarządu, inwestorów oraz banków i instytucji finansujących.</p>
+</details>
+</div>
+</section>
+</main>
+
+<footer id="kontakt" class="contact">
+<div class="cols">
+<div class="info reveal">
+<div class="label">Kontakt</div>
+<h2 class="disp">Porozmawiajmy o Twoim projekcie</h2>
+<div class="list">
+<a class="btn btn-red" href="tel:+48505564400" style="font-size:24px;padding:13px 18px 11px">tel. 505 564 400</a>
+<a class="mail" href="mailto:wwieczor@gmail.com">wwieczor@gmail.com</a>
+<span>ul. Krokusowa 6, 35-604 Rzeszów</span>
+<span class="small">WOJTEL Wojciech Wieczorek · NIP 813-336-15-34</span>
+</div>
+</div>
+<form class="form reveal" id="form" novalidate>
+<h3 class="disp">Szybkie zapytanie</h3>
+<div class="fields">
+<label>Imię i nazwisko / firma
+<input type="text" id="f-name" autocomplete="name" placeholder="np. Jan Kowalski, ABC Sp. z o.o.">
+</label>
+<fieldset>
+<legend>Temat</legend>
+<div class="chips" id="chips">
+<button type="button" class="chip" aria-pressed="true">Fundusze UE</button>
+<button type="button" class="chip" aria-pressed="false">Systemy ERP</button>
+<button type="button" class="chip" aria-pressed="false">ISO 27001</button>
+<button type="button" class="chip" aria-pressed="false">Inne</button>
+</div>
+</fieldset>
+<label>Wiadomość
+<textarea id="f-msg" rows="4" placeholder="Krótko opisz, czego potrzebujesz"></textarea>
+</label>
+<button type="submit" class="btn btn-ink" style="align-self:flex-start">Wyślij zapytanie →</button>
+<p class="note">Przycisk otworzy Twój program pocztowy z gotową wiadomością.</p>
+</div>
+</form>
+</div>
+<p class="copy">© <span id="yr">2026</span> WOJTEL Wojciech Wieczorek · Rzeszów</p>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // rok w stopce i licznik lat
+  var now = new Date().getFullYear();
+  document.getElementById('yr').textContent = now;
+  var target = now - 2008, y = 0, el = document.getElementById('years');
+  if (reduce) { el.textContent = target; }
+  else {
+    el.textContent = 0;
+    var t = setInterval(function(){ y++; el.textContent = y; if (y >= target) clearInterval(t); }, 70);
+  }
+
+  // pasek z hasłami
+  var items = ['Fundusze UE','FENG','FEPW','KPO','Systemy ERP','ISO 27001','Projekty B+R','Rzeszów · od 2008'];
+  var html = items.concat(items).map(function(s){ return '<span>'+s+'</span><i>✕</i>'; }).join('');
+  document.getElementById('ticker').innerHTML = html;
+
+  // pojawianie się sekcji przy przewijaniu
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function(e){ io.observe(e); });
+  } else { els.forEach(function(e){ e.classList.add('on'); }); }
+
+  // karty usług: jedna otwarta naraz
+  var cards = document.querySelectorAll('.svc');
+  cards.forEach(function(c){
+    c.addEventListener('toggle', function(){
+      if (c.open) cards.forEach(function(o){ if (o !== c) o.open = false; });
+    });
+  });
+
+  // formularz -> mailto
+  var topic = 'Fundusze UE';
+  var chips = document.querySelectorAll('.chip');
+  chips.forEach(function(b){
+    b.addEventListener('click', function(){
+      chips.forEach(function(x){ x.setAttribute('aria-pressed','false'); });
+      b.setAttribute('aria-pressed','true');
+      topic = b.textContent;
+    });
+  });
+  document.getElementById('form').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var name = document.getElementById('f-name').value.trim();
+    var msg = document.getElementById('f-msg').value.trim();
+    var body = 'Dzień dobry,\n\n' + (msg || ('proszę o kontakt w sprawie: ' + topic + '.')) + '\n\n' + name;
+    window.location.href = 'mailto:wwieczor@gmail.com?subject=' + encodeURIComponent('Zapytanie: ' + topic) + '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
